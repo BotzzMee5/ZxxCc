@@ -49,9 +49,6 @@ global.help = {
 menu(pushname, salam, mundur, upload, download, totalGb, usedGb, freeGb, ownerName, botName, jam, tanggal, runtime, prefix){
   return `${salam.slice(0,1).toUpperCase() + salam.slice(1)} ${pushname}
 
-*HITUNG MUNDUR IDUL FITRI*
- ${mundur}
-
 Creator : wa.me/6283174508962
 Time : ${jam}
 Date : ${tanggal}

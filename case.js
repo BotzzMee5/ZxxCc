@@ -141,6 +141,10 @@ module.exports = alpha = async (alpha, m, chatUpdate, store, antilink, antiwame,
                 })
             }
             break
+            case 'bot': {
+            	m.reply(`Apa Sayang🥰🥰`)
+            }
+            break
             case 'igphoto':
             case 'instaphoto':
             case 'instafoto':
