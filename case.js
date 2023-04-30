@@ -261,7 +261,7 @@ ${prefix}tiktokvn
                let media = await quoted.download()
                let encmedia = await alpha.sendImageAsSticker(m.chat, media, m, {
                   packname: global.packname,
-                  author: global.author
+                  author: ${pushname}
                })
                await fs.unlinkSync(encmedia)
             } else if (/video/.test(mime)) {
@@ -269,7 +269,7 @@ ${prefix}tiktokvn
                let media = await quoted.download()
                let encmedia = await alpha.sendVideoAsSticker(m.chat, media, m, {
                   packname: global.packname,
-                  author: global.author
+                  author: ${pushname}
                })
                await fs.unlinkSync(encmedia)
             } else {
@@ -293,6 +293,7 @@ ${prefix}tiktokvn
 			})
 	}
 	break
+
 
             default:
                 if (budy.startsWith('>')) {
