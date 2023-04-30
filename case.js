@@ -256,13 +256,12 @@ ${prefix}tiktokvn
          case 's':
          case 'sticker':
          case 'stiker': {
-         let name = ${pushname}
             if (!quoted) return reply(`Kirim/Reply Gambar/Video Dengan Caption ${prefix + command}\n\nDurasi Sticker Video 1-9 Detik`)
             if (/image/.test(mime)) {
                let media = await quoted.download()
                let encmedia = await alpha.sendImageAsSticker(m.chat, media, m, {
                   packname: global.packname,
-                  author: name
+                  author: global.myweb,
                })
                await fs.unlinkSync(encmedia)
             } else if (/video/.test(mime)) {
@@ -270,7 +269,7 @@ ${prefix}tiktokvn
                let media = await quoted.download()
                let encmedia = await alpha.sendVideoAsSticker(m.chat, media, m, {
                   packname: global.packname,
-                  author: name
+                  author: global.myweb,
                })
                await fs.unlinkSync(encmedia)
             } else {
