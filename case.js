@@ -123,18 +123,12 @@ module.exports = alpha = async (alpha, m, chatUpdate, store, antilink, antiwame,
             break
             case 'menu':
             case 'help': {
-                var mundur = await hitungmundur(4, 23)
-                var {
-                    totalGb,
-                    usedGb,
-                    freeGb
-                } = await nou.drive.info()
                 var {
                     download,
                     upload
                 } = await checkBandwidth();
-                alpha.sendMessage(m.chat, {
-                    caption: help.menu(pushname, salam, mundur, upload, download, totalGb, usedGb, freeGb, namaowner, namabot, jam, tanggal, runtime(process.uptime()), prefix)
+                alpha.sendMessage(from, {
+                    caption: help.menu(pushname, salam, mundur, upload, download, namaowner, namabot, jam, tanggal, runtime(process.uptime()), prefix)
                 }, {
                     quoted: m
                 })
