@@ -128,7 +128,7 @@ module.exports = alpha = async (alpha, m, chatUpdate, store, antilink, antiwame,
                     upload
                 } = await checkBandwidth();
                 alpha.sendMessage(from, {
-                    caption: help.menu(pushname, salam, mundur, upload, download, namaowner, namabot, jam, tanggal, runtime(process.uptime()), prefix)
+                    caption: help.menu(pushname, salam, upload, download, namaowner, namabot, jam, tanggal, runtime(process.uptime()), prefix)
                 }, {
                     quoted: m
                 })
