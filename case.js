@@ -123,15 +123,23 @@ module.exports = alpha = async (alpha, m, chatUpdate, store, antilink, antiwame,
             break
             case 'menu':
             case 'help': {
-                var {
-                    download,
-                    upload
-                } = await checkBandwidth();
-                alpha.sendMessage(from, {
-                    caption: help.menu(pushname, salam, upload, download, namaowner, namabot, jam, tanggal, runtime(process.uptime()), prefix)
-                }, {
-                    quoted: m
-                })
+            reply(`${salam.slice(0,1).toUpperCase() + salam.slice(1)} ${pushname}
+Creator : wa.me/6283174508962
+
+*Menu Download*
+${prefix}igdl
+${prefix}igphoto
+${prefix}igvideo
+${prefix}igreels
+${prefix}tiktok
+${prefix}tiktokaudio
+${prefix}tiktokvn
+
+*Menu Pembuatan*
+.sticker
+
+*Menu Openai*
+.ai`)
             }
             break
             case 'bot': {
